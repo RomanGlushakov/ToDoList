@@ -15,7 +15,7 @@ import io.reactivex.rxjava3.core.Single;
 public interface NotesDao {
 
     @Query("SELECT * FROM notes")
-    Single<List<Note>> getNotes();
+    LiveData<List<Note>> getNotes();
 
     @Insert
     Completable add (Note note);
